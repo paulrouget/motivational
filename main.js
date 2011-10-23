@@ -229,7 +229,7 @@ function upload() {
         try {
             var links = JSON.parse(xhr.responseText).upload.links;
             var hash = links.original;
-            hash = hash.replace("http://imgur.com/", "");
+            hash = hash.replace("http://i.imgur.com/", "");
             hash = hash.replace(".png", "");
             document.location.hash = "#" + hash;
             initViewer(hash);
